@@ -1,6 +1,7 @@
 import type {
   ActionArgs,
   LinksFunction,
+  MetaFunction,
 } from "@remix-run/node";
 import {
   Link,
@@ -16,6 +17,12 @@ import {
   login,
   register,
 } from "~/utils/session.server";
+
+export const meta: MetaFunction = () => ({
+  description:
+    "Login to submit your own jokes to Remix Jokes!",
+  title: "Remix Jokes | Login",
+});
 
 export const links: LinksFunction = () => [
   { rel: "stylesheet", href: stylesUrl },
