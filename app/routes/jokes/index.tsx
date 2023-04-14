@@ -1,4 +1,3 @@
-import type { LoaderArgs } from "@remix-run/node";
 import { json } from "@remix-run/node";
 import { useLoaderData, Link } from "@remix-run/react";
 
@@ -24,6 +23,14 @@ export default function JokesIndexRoute() {
       <Link to={data.randomJoke.id}>
         "{data.randomJoke.name}" Permalink
       </Link>
+    </div>
+  );
+}
+
+export function ErrorBoundary() {
+  return (
+    <div className="error-container">
+      I did a whoopsies.
     </div>
   );
 }
