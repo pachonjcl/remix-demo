@@ -10,17 +10,28 @@ Remix and NextJS are frameworks for building web applications with React both po
 
 Use node at least v16
 
-Install dependencies:
-`npm install`
-
 Create a .env file with the following values:
 
+| Variable          |   SQLITE      |  POSTGRESQL                                   |
+|:------------------|:--------------|:----------------------------------------------|
+| DATABASE_PROVIDER | sqlite        | postgresql                                    |
+| DATABASE_URL      | file:dev.db   | postgresql://USER:PASSWORD@HOST:PORT/DATABASE |
+| SESSION_SECRET    | something     | something                                     |
+
+Install dependencies:
+
+`npm install`
+
+In the scripts there is a `postinstall` script that will create the db and seed it.
+
+But if for some reason you want to setup and seed the database manually, run:
+
 ```
-DATABASE_URL="file:dev.db"
-SESSION_SECRET=something
+npx prisma db push
+npx prisma db seed
 ```
 
-Run the application
+Start the application on port `3000`
 
 ```sh
 npm run dev
