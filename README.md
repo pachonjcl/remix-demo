@@ -8,7 +8,7 @@ Remix and NextJS are frameworks for building web applications with React both po
 
 # How do you run it?
 
-Use node at least v16
+Use node at least version 16
 
 Create a .env file with the following values:
 
