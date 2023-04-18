@@ -1,53 +1,54 @@
-# Welcome to Remix!
+# Remix vs NextJS
 
-- [Remix Docs](https://remix.run/docs)
+Update this with your project details as you go.
 
-## Development
+# What is this demo?
 
-From your terminal:
+Remix and NextJS are frameworks for building web applications with React both popular server-side rendering (SSR) both are supported for deploy on Vercel.
+
+# How do you run it?
+
+Use node at least v16
+
+Install dependencies:
+`npm install`
+
+Create a .env file with the following values:
+
+```
+DATABASE_URL="file:dev.db"
+SESSION_SECRET=something
+```
+
+Setup and Seed the database (We are using prisma with sqlite for simplicity)
+
+```
+npx prisma db push
+npx prisma db seed
+```
+
+Run the application
 
 ```sh
 npm run dev
 ```
 
-This starts your app in development mode, rebuilding assets on file changes.
+# Understand
+### What competitors are there?
 
-## Deployment
+- Gatsby
+- Create React App (although it is no longer suggested)
 
-First, build your app for production:
+### Why would this be any different than the competition?
 
-```sh
-npm run build
-```
+- NextJS is backed up by Vercel and more than 2.6K contributors
+- Remix has more than 500 contributors.
 
-Then run the app in production mode:
+# Conclude
+### Would you recommend using this technology in the future?
 
-```sh
-npm start
-```
+- Definitely both frameworks provide very useful features to run react components and are easy to understand once you got the basics.
 
-Now you'll need to pick a host to deploy it to.
+### What situations would it be more useful than the competitors?
 
-### DIY
-
-If you're familiar with deploying node applications, the built-in Remix app server is production-ready.
-
-Make sure to deploy the output of `remix build`
-
-- `build/`
-- `public/build/`
-
-### Using a Template
-
-When you ran `npx create-remix@latest` there were a few choices for hosting. You can run that again to create a new project, then copy over your `app/` folder to the new project that's pre-configured for your target server.
-
-```sh
-cd ..
-# create a new project, and pick a pre-configured host
-npx create-remix@latest
-cd my-new-remix-app
-# remove the new project's app (not the old one!)
-rm -rf app
-# copy your app over
-cp -R ../my-old-remix-app/app app
-```
+- Remix provides a more browser like experiences where you have the full control of the browser properties. While NextJS provides a more robust application structure for more complex projects.
