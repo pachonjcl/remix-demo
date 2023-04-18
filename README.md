@@ -20,13 +20,6 @@ DATABASE_URL="file:dev.db"
 SESSION_SECRET=something
 ```
 
-Setup and Seed the database (We are using prisma with sqlite for simplicity)
-
-```
-npx prisma db push
-npx prisma db seed
-```
-
 Run the application
 
 ```sh
