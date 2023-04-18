@@ -33,6 +33,13 @@ Run the application
 npm run dev
 ```
 
+If you want to play around with a logged user, you can register yours or use the seed one
+
+```
+user: kody
+pwd: twixrox
+```
+
 # Understand
 ### What competitors are there?
 
